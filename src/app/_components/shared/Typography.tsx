@@ -2,7 +2,7 @@ import { boska, switzer } from "@/app/ui/fonts";
 import React, { CSSProperties } from "react";
 
 type TypographyProps = {
-  level: "title" | "heading" | "subheading" | "paragraph" | "other";
+  level: "heading" | "subheading" | "paragraph" | "other";
   children: string;
   extra?: CSSProperties;
 };
@@ -12,19 +12,11 @@ export default function Typography({
   children,
   extra,
 }: TypographyProps) {
-  if (level == "title") {
-    return (
-      <h1
-        className={`${boska.className} antialiased font-medium text-5xl tablet:text-6xl laptop:text-7xl`}
-      >
-        {children}
-      </h1>
-    );
-  }
   if (level == "heading") {
     return (
       <h2
         className={`${boska.className} antialiased font-medium text-3xl tablet:text-5xl laptop:text-5xl`}
+        style={extra}
       >
         {children}
       </h2>
@@ -34,6 +26,7 @@ export default function Typography({
     return (
       <h3
         className={`${switzer.className} antialiased font-light text-xl tablet:text-2xl laptop:text-3xl`}
+        style={extra}
       >
         {children}
       </h3>
@@ -43,6 +36,7 @@ export default function Typography({
     return (
       <p
         className={`${switzer.className} antialiased font-extralight text-lg tablet:text-xl laptop:text-2xl`}
+        style={extra}
       >
         {children}
       </p>

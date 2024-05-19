@@ -35,7 +35,7 @@ export default function Typography({
   if (level == "paragraph") {
     return (
       <p
-        className={`${switzer.className} antialiased font-extralight text-lg tablet:text-xl laptop:text-2xl`}
+        className={`${switzer.className} antialiased font-extralight text-base tablet:text-lg laptop:text-xl`}
         style={extra}
       >
         {children}

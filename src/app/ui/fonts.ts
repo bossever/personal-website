@@ -4,6 +4,10 @@ export const boska = localFont({
   src: [
     {
       path: "../../../public/fonts/Boska-Variable.ttf",
+      weight: "700",
+    },
+    {
+      path: "../../../public/fonts/Boska-Variable.ttf",
       weight: "500",
     },
     {

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-color: #fbf6eb;
   --text-color: #000000;

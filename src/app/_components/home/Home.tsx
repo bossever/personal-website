@@ -25,7 +25,6 @@ export default function Home() {
         <Image
           className={`${styles.glyph} ${styles.glyphThick}`}
           src={glyphThick}
-          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="Glyph graphic"
         />
         <Image

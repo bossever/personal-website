@@ -1,26 +1,31 @@
 "use client";
 
-import { useContext, useState } from "react";
-import Typography from "../shared/Typography";
-import Image from "next/image";
-import lightIcon from "../../../../public/images/light.svg";
-import darkIcon from "../../../../public/images/dark.svg";
-import { useMediaQuery } from "usehooks-ts";
 import { themes } from "@/app/types/themes";
-import { ThemeContext } from "../context/ThemeContext";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import darkIcon from "../../../../public/images/dark.svg";
+import lightIcon from "../../../../public/images/light.svg";
+import Typography from "../shared/Typography";
 
 export default function ThemeSelect() {
   const [open, setOpen] = useState<boolean>(false);
-  const { theme, saveTheme, removeThemePreference } = useContext(ThemeContext);
-  const prefersDark = useMediaQuery("(prefers-color-scheme: dark)");
+  const [mounted, setMounted] = useState<boolean>(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   const handleOpen = () => {
     setOpen(!open);
   };
 
   const handleSelect = (theme: (typeof themes)[number]) => {
-    saveTheme(theme);
+    setTheme(theme);
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
@@ -29,11 +34,7 @@ export default function ThemeSelect() {
         onClick={handleOpen}
       >
         <Image
-          src={
-            theme == "dark" || (theme == "system" && prefersDark)
-              ? lightIcon
-              : darkIcon
-          }
+          src={resolvedTheme === "dark" ? lightIcon : darkIcon}
           width={24}
           height={24}
           alt="Light Mode Icon"

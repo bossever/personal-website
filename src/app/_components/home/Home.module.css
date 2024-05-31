@@ -8,7 +8,6 @@
   aspect-ratio: 1 / 1;
   height: calc(60px + 5vw);
   width: calc(60px + 5vw);
-  filter: var(--glyph-color-filter);
 }
 
 .glyphThick {

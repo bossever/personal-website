@@ -15,7 +15,7 @@ export default function Typography({
   if (level == "heading") {
     return (
       <h2
-        className={`${boska.className} antialiased font-medium text-3xl tablet:text-5xl laptop:text-5xl`}
+        className={`${boska.className} antialiased font-medium text-3xl tablet:text-5xl laptop:text-5xl dark:text-[#ebf0fa]`}
         style={extra}
       >
         {children}
@@ -25,7 +25,7 @@ export default function Typography({
   if (level == "subheading") {
     return (
       <h3
-        className={`${switzer.className} antialiased font-light text-xl tablet:text-2xl laptop:text-3xl`}
+        className={`${switzer.className} antialiased font-light text-xl tablet:text-2xl laptop:text-3xl dark:text-[#ebf0fa]`}
         style={extra}
       >
         {children}
@@ -35,7 +35,7 @@ export default function Typography({
   if (level == "paragraph") {
     return (
       <p
-        className={`${switzer.className} antialiased font-extralight text-base tablet:text-lg laptop:text-xl`}
+        className={`${switzer.className} antialiased font-extralight text-base tablet:text-lg laptop:text-xl dark:text-[#ebf0fa]`}
         style={extra}
       >
         {children}
@@ -44,7 +44,7 @@ export default function Typography({
   }
   return (
     <p
-      className={`${switzer.className} antialiased font-light text-sm tablet:text-base laptop:text-lg`}
+      className={`${switzer.className} antialiased font-light text-sm tablet:text-base laptop:text-lg dark:text-[#ebf0fa]`}
       style={extra}
     >
       {children}

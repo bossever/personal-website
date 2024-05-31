@@ -1,46 +1,44 @@
-import { Metadata } from "next";
-import "@/app/globals.css";
-import { boska } from "@/app/ui/fonts";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Ayushman Sachan",
-  description: "Portfolio website of Ayushman Sachan",
-  icons: {
-    icon: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/images/favicon-light.svg",
-        href: "/images/favicon-light.svg",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/images/favicon-dark.svg",
-        href: "/images/favicon-dark.svg",
-      },
-    ],
-    apple: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/images/favicon-light.ico",
-        href: "/images/favicon-light.ico",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/images/favicon-dark.ico",
-        href: "/images/favicon-dark.ico",
-      },
-    ],
-  },
-};
+import "@/app/globals.css";
+import { ThemeContext } from "./_components/context/ThemeContext";
+import { useLocalStorage, useMediaQuery } from "usehooks-ts";
+import { themes } from "./types/themes";
+import { useEffect } from "react";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [theme, saveTheme, removeThemePreference] = useLocalStorage<
+    (typeof themes)[number]
+  >("theme", "system", { initializeWithValue: true });
+  const prefersDark = useMediaQuery("(prefers-color-scheme: dark)");
+
+  useEffect(() => {
+    console.log(theme);
+  }, []);
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeContext.Provider
+        value={{ theme, saveTheme, removeThemePreference }}
+      >
+        <body
+          className={`
+            ${
+              theme == "dark" || (theme == "system" && prefersDark)
+                ? "dark"
+                : ""
+            }
+            bg-[#fbf6eb] dark:bg-[#202020]
+          `}
+          suppressHydrationWarning
+        >
+          {children}
+        </body>
+      </ThemeContext.Provider>
     </html>
   );
 }

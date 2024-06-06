@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="bg-[#fbf6eb] dark:bg-[#202020]">
         <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
     </html>

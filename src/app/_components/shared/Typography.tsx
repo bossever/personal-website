@@ -15,7 +15,7 @@ export default function Typography({
   if (level == "heading") {
     return (
       <h2
-        className={`${boska.className} antialiased font-medium text-3xl tablet:text-5xl laptop:text-5xl dark:text-[#ebf0fa]`}
+        className={`${boska.className} antialiased font-medium text-4xl tablet:text-5xl laptop:text-[56px] dark:text-[#ebf0fa]`}
         style={extra}
       >
         {children}

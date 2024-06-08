@@ -8,14 +8,15 @@ import glyphThick from "./../../../../public/images/glyph-thick.svg";
 export default function About() {
   return (
     <Section title="About me" id="about-me">
-      <div className="flex flex-col gap-6 tablet:flex-row-reverse laptop:gap-12 desktop:gap-44">
-        <div className="p-10 relative tablet:p-0 tablet:float-right laptop:float-none tablet:hidden laptop:block">
+      <div className="flex flex-col gap-6 overflow-hidden tablet:flex-row-reverse laptop:gap-20 desktop:gap-56">
+        <div className="p-10 relative max-h-[500px] tablet:p-0 tablet:float-right laptop:float-none tablet:hidden laptop:block">
           <Image
-            className="absolute top-0 left-0 w-full -z-10 tablet:hidden invert-0 dark:invert-[100]"
+            className="absolute w-full top-0 left-0 -z-10 tablet:hidden invert-0 dark:invert-[100]"
             src={glyphHeadshot}
             alt=""
           />
           <Image
+            className="h-full object-contain"
             src={pic}
             alt="A picture of Ayushman Sachan, such a handsome lad!"
             quality={100}
@@ -23,7 +24,7 @@ export default function About() {
         </div>
         <div>
           <Image
-            className="hidden tablet:block tablet:float-right laptop:hidden px-4 pb-2"
+            className="hidden tablet:block tablet:float-right laptop:hidden pl-4 py-2 w-[40vw]"
             width={300}
             height={300}
             src={pic}
@@ -54,6 +55,15 @@ export default function About() {
           </Typography>
         </div>
       </div>
+      <Image
+        className={`
+          -z-10 absolute hidden laptop:hidden tablet:block tablet:bottom-20 tablet:left-1/2
+          tablet:-translate-x-1/2 tablet:-translate-y-1/2 desktop:top-1/2 desktop:left-1/2
+          desktop:-translate-x-1/2 desktop:-translate-y-1/2
+        `}
+        src={glyphThick}
+        alt=""
+      />
     </Section>
   );
 }

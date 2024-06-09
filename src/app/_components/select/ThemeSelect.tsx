@@ -43,7 +43,10 @@ export default function ThemeSelect() {
         <div
           className={`${
             open ? "block" : "hidden"
-          } absolute top-14 right-0 border p-1 border-gray-600 rounded-lg flex flex-col items-start z-20 shadow-[]]`}
+          } absolute top-14 right-0 border p-1 border-[#202020] border-opacity-15
+            dark:border-white dark:border-opacity-15 rounded-lg flex flex-col items-start
+            z-20 bg-[#fbf6eb] dark:bg-[#202020] shadow-lg
+          `}
           onClick={(e) => {
             e.stopPropagation();
           }}

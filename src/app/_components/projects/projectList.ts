@@ -35,7 +35,6 @@ export const projectList: ProjectCardProps[] = [
       Collaborated with developers globally to make meaningful contributions by merging 20+ PRs to the Checkstyle Open Source Project.
     `,
     github:
-      "https://github.com/pulls?q=is%3Apr+author%3Abossever+archived%3Afalse+is%3Amerged+repo%3Acheckstyle%2Fcheckstyle+sort%3Acomments-desc",
+      "https://github.com/search?q=is%3Apr+author%3Abossever+archived%3Afalse+is%3Amerged+repo%3Acheckstyle%2Fcheckstyle+sort%3Acomments-desc",
   },
 ];
- 

@@ -23,19 +23,19 @@ export default function Navbar() {
         </span>
         <div className="flex items-center gap-8 laptop:gap-10 desktop:gap-12">
           <nav className="hidden gap-8 laptop:gap-10 desktop:gap-12 min-[700px]:flex">
-            <Link href="#section-home">
+            <Link href="#home">
               <Typography level="paragraph">Home</Typography>
             </Link>
-            <Link href="#section-about">
+            <Link href="#about">
               <Typography level="paragraph">About Me</Typography>
             </Link>
-            <Link href="#section-projects">
+            <Link href="#projects">
               <Typography level="paragraph">Projects</Typography>
             </Link>
-            <Link href="#section-skills">
+            <Link href="#skills">
               <Typography level="paragraph">Skills</Typography>
             </Link>
-            <Link href="#section-work">
+            <Link href="#work">
               <Typography level="paragraph">Work</Typography>
             </Link>
           </nav>

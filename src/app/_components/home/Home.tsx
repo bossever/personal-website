@@ -20,7 +20,7 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          Software Engineer with a knack for good design
+          Software engineer with a knack for great design
         </Typography>
         <Image
           className={`${styles.glyph} ${styles.glyphThick} invert-0 dark:invert-[100]`}

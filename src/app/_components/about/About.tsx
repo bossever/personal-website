@@ -58,8 +58,8 @@ export default function About() {
       <Image
         className={`
           -z-10 absolute hidden laptop:hidden tablet:block tablet:bottom-20 tablet:left-1/2
-          tablet:-translate-x-1/2 tablet:-translate-y-1/2 desktop:top-1/2 desktop:left-1/2
-          desktop:-translate-x-1/2 desktop:-translate-y-1/2
+          tablet:-translate-x-1/2 tablet:-translate-y-1/2 desktop:block desktop:top-1/2
+          desktop:left-1/2 desktop:-translate-x-1/2 desktop:-translate-y-1/2 invert-0 dark:invert-[100]
         `}
         src={glyphThick}
         alt=""

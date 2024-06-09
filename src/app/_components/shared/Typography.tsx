@@ -43,11 +43,11 @@ export default function Typography({
     );
   }
   return (
-    <p
+    <span
       className={`${switzer.className} antialiased font-light text-sm tablet:text-base laptop:text-lg dark:text-[#ebf0fa]`}
       style={extra}
     >
       {children}
-    </p>
+    </span>
   );
 }

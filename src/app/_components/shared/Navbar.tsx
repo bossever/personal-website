@@ -6,7 +6,7 @@ import ThemeSelect from "../select/ThemeSelect";
 export default function Navbar() {
   return (
     <>
-      <header className="absolute w-full top-0 left-0 flex justify-between items-center p-6 tablet:p-8 laptop:p-10 laptop:px-14 desktop:px-16">
+      <header className="fixed z-20 bg-[#] w-full top-0 left-0 flex justify-between items-center p-6 tablet:p-8 laptop:p-10 laptop:px-14 desktop:px-16">
         <span
           className={`${boska.className} antialiased font-bold cursor-default dark:text-[#ebf0fa] text-[32px] tablet:text-[36px] laptop:text-[40px]`}
         >

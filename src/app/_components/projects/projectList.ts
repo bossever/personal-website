@@ -1,6 +1,6 @@
 import { ProjectCardProps } from "./ProjectCard";
 
-export const projects: ProjectCardProps[] = [
+export const projectList: ProjectCardProps[] = [
   {
     title: "Microservices application using Django & Flask",
     techStack: ["Python", "Django", "Flask", "RabbitMQ", "SQLite"],

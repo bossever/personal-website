@@ -17,7 +17,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <>
-      <div className="flex gap-4 border border-[#202020] border-opacity-15 dark:border-white dark:border-opacity-15 flex-col p-4 rounded-md">
+      <div className="h-full flex gap-4 border border-[#202020] border-opacity-15 dark:border-white dark:border-opacity-15 flex-col p-2 tablet:p-4 rounded-md">
         <Typography level="subheading">{title}</Typography>
         <Typography level="paragraph">{techStack.join(", ")}</Typography>
         <Typography

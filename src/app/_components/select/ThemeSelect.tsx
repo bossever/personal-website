@@ -13,12 +13,13 @@ export default function ThemeSelect() {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
 
-  const handleOpen = () => {
+  const toggleOpen = () => {
     setOpen(!open);
   };
 
   const handleSelect = (theme: (typeof themes)[number]) => {
     setTheme(theme);
+    toggleOpen();
   };
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function ThemeSelect() {
     <>
       <button
         className="flex relative justify-center items-center p-2"
-        onClick={handleOpen}
+        onClick={toggleOpen}
       >
         <Image
           src={resolvedTheme === "dark" ? lightIcon : darkIcon}
@@ -43,7 +44,7 @@ export default function ThemeSelect() {
         <div
           className={`${
             open ? "block" : "hidden"
-          } absolute top-14 right-0 border p-1 border-[#202020] border-opacity-15
+          } absolute top-12 right-0 border p-1 border-[#202020] border-opacity-15
             dark:border-white dark:border-opacity-15 rounded-lg flex flex-col items-start
             z-20 bg-[#fbf6eb] dark:bg-[#202020] shadow-lg
           `}
@@ -54,7 +55,7 @@ export default function ThemeSelect() {
           {themes.map((item) => (
             <div
               key={item}
-              className="flex items-center gap-3 p-2 tablet:px-4 w-full rounded-md hover:backdrop-invert-[0.05]"
+              className="flex items-center gap-3 p-2 tablet:px-4 min-w-28 w-full rounded-md hover:backdrop-invert-[0.05]"
               onClick={() => handleSelect(item)}
             >
               <span
@@ -67,6 +68,7 @@ export default function ThemeSelect() {
               <Typography
                 level="other"
                 extra={{
+                  fontSize: '1.1rem',
                   fontWeight: "200",
                 }}
               >
@@ -80,7 +82,7 @@ export default function ThemeSelect() {
         className={`${
           open ? "absolute" : "hidden"
         } top-0 right-0 w-screen h-screen z-10`}
-        onClick={handleOpen}
+        onClick={toggleOpen}
       />
     </>
   );

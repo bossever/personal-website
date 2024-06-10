@@ -7,7 +7,7 @@ import glyphThick from "./../../../../public/images/glyph-thick.svg";
 
 export default function About() {
   return (
-    <Section title="About me" id="about-me">
+    <Section title="About me" id="about">
       <div className="flex flex-col gap-6 overflow-hidden tablet:flex-row-reverse laptop:gap-20 desktop:gap-56">
         <div className="p-10 relative max-h-[500px] tablet:p-0 tablet:float-right laptop:float-none tablet:hidden laptop:block">
           <Image

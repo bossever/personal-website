@@ -44,7 +44,7 @@ export default function Typography({
   }
   return (
     <span
-      className={`${switzer.className} antialiased font-light text-sm tablet:text-base laptop:text-lg dark:text-[#ebf0fa]`}
+      className={`${switzer.className} antialiased  dark:text-[#ebf0fa]`}
       style={extra}
     >
       {children}

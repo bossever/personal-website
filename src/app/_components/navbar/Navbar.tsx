@@ -3,6 +3,7 @@ import Typography from "../shared/Typography";
 import Link from "next/link";
 import ThemeSelect from "../select/ThemeSelect";
 import NavbarMenu from "./NavbarMenu";
+import styles from "./Navbar.module.css";
 
 export const navMenuItems: {
   href: string;
@@ -17,16 +18,16 @@ export const navMenuItems: {
     label: "About Me",
   },
   {
+    href: "work",
+    label: "Work",
+  },
+  {
     href: "projects",
     label: "Projects",
   },
   {
     href: "skills",
     label: "Skills",
-  },
-  {
-    href: "work",
-    label: "Work",
   },
 ];
 
@@ -52,7 +53,11 @@ export default function Navbar() {
         <div className="flex items-center gap-8 laptop:gap-10 desktop:gap-12">
           <nav className="hidden gap-8 laptop:gap-10 desktop:gap-12 min-[700px]:flex">
             {navMenuItems.map((item) => (
-              <Link key={item.href} href={`#${item.href}`}>
+              <Link
+                className={`${styles.navItem} after:bg-black dark:after:bg-[#ebf0fa]`}
+                key={item.href}
+                href={`#${item.href}`}
+              >
                 <Typography level="paragraph">{item.label}</Typography>
               </Link>
             ))}

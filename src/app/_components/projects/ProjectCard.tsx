@@ -25,7 +25,7 @@ export default function ProjectCard({
         `}
       >
         <Typography level="subheading">{title}</Typography>
-        <Typography level="paragraph">{techStack.join(", ")}</Typography>
+        <Typography level="emphasis">{techStack.join(", ")}</Typography>
         <Typography
           level="paragraph"
           extra={{

@@ -12,7 +12,7 @@ export default function Section({ title, children, id }: SectionProps) {
       id={id}
       className={`
         relative min-h-[100svh] flex flex-col border-t border-[#202020]
-        border-opacity-15 dark:border-white dark:border-opacity-15 px-12 py-16 gap-6
+        border-opacity-15 dark:border-white dark:border-opacity-15 px-10 py-16 gap-6
         tablet:gap-8 laptop:gap-10 tablet:px-24 tablet:py-20 laptop:px-32 laptop:py-24
       `}
     >

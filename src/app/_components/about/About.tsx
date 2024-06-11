@@ -33,9 +33,6 @@ export default function About() {
           />
           <Typography
             level="paragraph"
-            extra={{
-              textAlign: "justify",
-            }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             rutrum porttitor enim viverra dignissim. Duis placerat massa non

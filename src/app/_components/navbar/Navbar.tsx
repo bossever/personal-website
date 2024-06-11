@@ -35,7 +35,8 @@ export default function Navbar() {
     <>
       <header
         className={`
-          fixed z-20 w-full top-0 left-0 flex justify-between bg-[#fbf6eb] dark:bg-[#202020]
+          fixed z-20 w-full top-0 left-0 flex justify-between bg-[#fbf6ebdc] dark:bg-[#202020d9]
+          tablet:bg-[#fbf6eb] tablet:dark:bg-[#202020] backdrop-blur-md tablet:backdrop-blur-0
           items-center h-20 tablet:h-24 desktop:h-28 px-8 laptop:px-14 desktop:px-16 border-0
           border-b border-[#202020] border-opacity-15 dark:border-white dark:border-opacity-15
         `}
@@ -50,14 +51,14 @@ export default function Navbar() {
         </span>
         <div className="flex items-center gap-8 laptop:gap-10 desktop:gap-12">
           <nav className="hidden gap-8 laptop:gap-10 desktop:gap-12 min-[700px]:flex">
-            {navMenuItems.map(item => (
+            {navMenuItems.map((item) => (
               <Link key={item.href} href={`#${item.href}`}>
                 <Typography level="paragraph">{item.label}</Typography>
               </Link>
             ))}
           </nav>
           <ThemeSelect />
-          <NavbarMenu/>
+          <NavbarMenu />
         </div>
       </header>
     </>

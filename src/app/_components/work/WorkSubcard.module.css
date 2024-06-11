@@ -28,3 +28,13 @@
   transform: translateX(-50%) translateY(-50%);
   border-radius: 100%;
 }
+
+@media only screen and (max-width: 550px) {
+  .timeline::before {
+    left: calc(0px - var(--offset-x));
+  }
+
+  .timeline::after {
+    left: calc(0px - var(--offset-x));
+  }
+}

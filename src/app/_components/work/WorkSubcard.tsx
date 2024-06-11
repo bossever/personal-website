@@ -13,7 +13,7 @@ export default function WorkSubcard({ role }: WorkSubcardProps) {
     <>
       <div
         className={`
-          ${styles.timeline} w-full flex flex-col pt-3 pl-10 gap-2 before:bg-black
+          ${styles.timeline} w-full flex flex-col pt-3 pl-2 tablet:pl-10 gap-2 before:bg-black
           after:bg-black dark:before:bg-[#ebf0fa] dark:after:bg-[#ebf0fa]
         `}
       >

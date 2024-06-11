@@ -6,7 +6,7 @@ export default function Work() {
   return (
     <>
       <Section id="work" title="Work Experience">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-10">
           {WorkExperience.map((item, index) => (
             <WorkCard key={index} work={item} />
           ))}

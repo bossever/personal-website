@@ -27,12 +27,16 @@ export default function Home() {
           Software engineer with a knack for great design
         </Typography>
         <Image
-          className={`${styles.glyph} ${styles.glyphThick} invert-0 dark:invert-[100]`}
+          className={`
+            ${styles.glyph} ${styles.glyphThick} invert-0 dark:invert-[100] select-none
+          `}
           src={glyphThick}
           alt="Glyph graphic"
         />
         <Image
-          className={`${styles.glyph} ${styles.glyphThin} invert-0 dark:invert-[100]`}
+          className={`
+            ${styles.glyph} ${styles.glyphThin} invert-0 dark:invert-[100] select-none
+          `}
           src={glyphThin}
           alt="Glyph graphic"
         />

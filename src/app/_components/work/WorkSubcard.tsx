@@ -23,7 +23,7 @@ export default function WorkSubcard({ role }: WorkSubcardProps) {
         </div>
         <div className="w-full px-2">
           {descriptionIsArray ? (
-            <ul className="list-disc ml-6">
+            <ul className="list-disc ml-6 flex flex-col gap-4">
               {(role.description as string[]).map((item, index) => (
                 <li key={index}>
                   <Typography level="paragraph">{item}</Typography>

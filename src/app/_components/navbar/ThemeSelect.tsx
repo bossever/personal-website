@@ -1,13 +1,13 @@
 "use client";
 
 import { themes } from "@/app/types/themes";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import darkIcon from "../../../../public/images/dark.svg";
 import lightIcon from "../../../../public/images/light.svg";
 import Typography from "../shared/Typography";
-import { AnimatePresence, motion } from "framer-motion";
 
 export default function ThemeSelect() {
   const [open, setOpen] = useState<boolean>(false);

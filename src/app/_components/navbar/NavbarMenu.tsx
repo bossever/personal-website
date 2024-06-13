@@ -1,11 +1,11 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { FaArrowLeft, FaBars } from "react-icons/fa6";
 import Typography from "../shared/Typography";
 import { navMenuItems } from "./Navbar";
-import { AnimatePresence, motion } from "framer-motion";
 
 export default function NavbarMenu() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

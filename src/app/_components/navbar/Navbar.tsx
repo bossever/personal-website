@@ -1,7 +1,7 @@
 import { boska } from "@/app/ui/fonts";
 import Typography from "../shared/Typography";
 import Link from "next/link";
-import ThemeSelect from "../select/ThemeSelect";
+import ThemeSelect from "./ThemeSelect";
 import NavbarMenu from "./NavbarMenu";
 import styles from "./Navbar.module.css";
 

@@ -17,3 +17,41 @@
   width: 100%;
   opacity: 1;
 }
+
+.flip {
+  perspective: 100px;
+}
+
+.flip:hover .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flip:hover .flipInner.flipped {
+  transform: rotateY(0deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.flipInner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-out;
+}
+
+.flipFront {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  backface-visibility: hidden;
+}
+
+.flipBack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+  backface-visibility: hidden;
+}

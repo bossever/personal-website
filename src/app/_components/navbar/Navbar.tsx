@@ -7,7 +7,8 @@ import ThemeSelect from "./ThemeSelect";
 import NavbarMenu from "./NavbarMenu";
 import styles from "./Navbar.module.css";
 import { useWindowScroll } from "@uidotdev/usehooks";
-import { useEffect } from "react";
+import Image from "next/image";
+import navbarGlyph from "../../../../public/images/navbar-glyph.svg";
 
 export const navMenuItems: {
   href: string;
@@ -46,8 +47,7 @@ export default function Navbar() {
           dark:bg-[#202020d9] tablet:bg-[#fbf6eb] tablet:dark:bg-[#202020]
           backdrop-blur-md tablet:backdrop-blur-0 items-center h-20 tablet:h-24
           desktop:h-28 px-8 laptop:px-14 desktop:px-16 border-0 border-[#202020]
-          dark:border-white transition-all
-          duration-200 border-b
+          dark:border-white transition-all duration-200 border-b
           ${
             yScroll && yScroll >= 150
               ? "border-opacity-15 dark:border-opacity-15"
@@ -55,14 +55,32 @@ export default function Navbar() {
           }
         `}
       >
-        <span
-          className={`
-            ${boska.className} antialiased font-bold cursor-default dark:text-[#ebf0fa]
-            text-[32px] tablet:text-[36px] laptop:text-[40px]
+        <div className={`${styles.flip} w-12 h-full`}>
+          <div
+            className={`
+            ${yScroll && yScroll >= 500 && `${styles.flipped} flipped`}
+            ${styles.flipInner} w-full h-full
           `}
-        >
-          AS
-        </span>
+          >
+            <Image
+              className={`
+                ${styles.flipFront}
+                dark:invert aspect-square w-8 tablet:w-9 laptop:w-10
+              `}
+              src={navbarGlyph}
+              alt=""
+            />
+            <span
+              className={`
+                ${styles.flipBack}
+                ${boska.className} antialiased font-bold cursor-default dark:text-[#ebf0fa]
+                text-[32px] tablet:text-[36px] laptop:text-[40px] select-none
+            `}
+            >
+              AS
+            </span>
+          </div>
+        </div>
         <div className="flex items-center gap-8 laptop:gap-10 desktop:gap-12">
           <nav className="hidden gap-8 laptop:gap-10 desktop:gap-12 min-[700px]:flex">
             {navMenuItems.map((item) => (

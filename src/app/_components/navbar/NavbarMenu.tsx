@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaArrowLeft, FaBars } from "react-icons/fa6";
 import Typography from "../shared/Typography";
 import { navMenuItems } from "./Navbar";
+import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 export default function NavbarMenu() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

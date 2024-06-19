@@ -7,7 +7,12 @@ import glyphThin from "./../../../../public/images/glyph-thin.svg";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-[800px] max-h-[1200px] h-lvh flex justify-center items-center px-12">
+    <main
+      className={`
+      w-full min-h-[800px] max-h-[1200px] h-lvh flex justify-center items-center px-12
+      transition-all duration-200
+    `}
+    >
       <div className="relative flex flex-col gap-4 max-w-2/3 p-2 tablet:p-6 laptop:p-8 desktop:p-10">
         <h1
           className={`

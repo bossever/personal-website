@@ -15,7 +15,7 @@ export default function Typography({
   if (level === "heading") {
     return (
       <h2
-        className={`${boska.className} antialiased font-medium text-4xl tablet:text-5xl laptop:text-[56px] dark:text-[#ebf0fa]`}
+        className={`${boska.className} antialiased font-medium text-4xl tablet:text-5xl laptop:text-[56px] dark:text-[#ebf0fa] select-none`}
         style={extra}
       >
         {children}
@@ -45,7 +45,7 @@ export default function Typography({
   if (level === "emphasis") {
     return (
       <p
-        className={`${switzer.className} antialiased italic text-base tablet:text-lg laptop:text-xl dark:text-[#ebf0fa]`}
+        className={`${switzer.className} antialiased italic text-base tablet:text-lg laptop:text-xl dark:text-[#ebf0fa] cursor-default  `}
         style={extra}
       >
         {children}

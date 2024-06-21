@@ -39,7 +39,7 @@ export default function WorkCard({ work, collapsed }: WorkCardProps) {
           <Typography level="subheading">{work.location}</Typography>
         </div>
         <motion.div
-          className="overflow-hidden"
+          className="overflow-y-clip"
           initial={{
             height: 0,
             opacity: 0,

@@ -54,6 +54,9 @@ export default function Navbar() {
               : "border-opacity-0 dark:border-opacity-0"
           }
         `}
+        style={{
+          WebkitBackdropFilter: "blur(12px)",
+        }}
       >
         <div className={`${styles.flip} w-12 h-full`}>
           <div

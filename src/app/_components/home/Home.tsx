@@ -19,6 +19,10 @@ export default function Home() {
             ${boska.className} ${styles.title} antialiased text-center dark:text-[#ebf0fa]
             font-medium text-6xl tablet:text-6xl laptop:text-7xl desktop:text-8xl select-none
           `}
+          style={{
+            WebkitUserSelect: "none",
+            cursor: "default",
+          }}
         >
           Ayushman Sachan
         </h1>
@@ -27,6 +31,8 @@ export default function Home() {
           extra={{
             textAlign: "center",
             userSelect: "none",
+            WebkitUserSelect: "none",
+            cursor: "default",
           }}
         >
           Software engineer with a knack for great design
@@ -37,6 +43,9 @@ export default function Home() {
           `}
           src={glyphThick}
           alt="Glyph graphic"
+          style={{
+            WebkitUserSelect: "none",
+          }}
         />
         <Image
           className={`
@@ -44,6 +53,9 @@ export default function Home() {
           `}
           src={glyphThin}
           alt="Glyph graphic"
+          style={{
+            WebkitUserSelect: "none",
+          }}
         />
       </div>
     </main>

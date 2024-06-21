@@ -78,7 +78,10 @@ export default function Navbar() {
                 ${styles.flipBack}
                 ${boska.className} antialiased font-bold cursor-default dark:text-[#ebf0fa]
                 text-[32px] tablet:text-[36px] laptop:text-[40px] select-none
-            `}
+              `}
+              style={{
+                WebkitUserSelect: "none",
+              }}
             >
               AS
             </span>

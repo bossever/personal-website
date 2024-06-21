@@ -16,7 +16,11 @@ export default function Typography({
     return (
       <h2
         className={`${boska.className} antialiased font-medium text-4xl tablet:text-5xl laptop:text-[56px] dark:text-[#ebf0fa] select-none`}
-        style={extra}
+        style={{
+          ...extra,
+          WebkitUserSelect: "none",
+          cursor: "default",
+        }}
       >
         {children}
       </h2>

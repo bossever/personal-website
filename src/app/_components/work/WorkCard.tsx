@@ -25,6 +25,9 @@ export default function WorkCard({ work, collapsed }: WorkCardProps) {
         <div
           className="w-full flex justify-between items-center cursor-pointer select-none"
           onClick={toggleCollapse}
+          style={{
+            WebkitUserSelect: "none",
+          }}
         >
           <div className="flex items-center gap-4">
             <motion.span

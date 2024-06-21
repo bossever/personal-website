@@ -59,33 +59,35 @@ export default function Navbar() {
         }}
       >
         <div className={`${styles.flip} w-12 h-full`}>
-          <div
-            className={`
+          <Link href="#home">
+            <div
+              className={`
             ${yScroll && yScroll >= 500 && `${styles.flipped} flipped`}
             ${styles.flipInner} w-full h-full
           `}
-          >
-            <Image
-              className={`
+            >
+              <Image
+                className={`
                 ${styles.flipFront}
                 dark:invert aspect-square w-8 tablet:w-9 laptop:w-10
               `}
-              src={navbarGlyph}
-              alt=""
-            />
-            <span
-              className={`
+                src={navbarGlyph}
+                alt=""
+              />
+              <span
+                className={`
                 ${styles.flipBack}
                 ${boska.className} antialiased font-bold cursor-default dark:text-[#ebf0fa]
                 text-[32px] tablet:text-[36px] laptop:text-[40px] select-none
               `}
-              style={{
-                WebkitUserSelect: "none",
-              }}
-            >
-              AS
-            </span>
-          </div>
+                style={{
+                  WebkitUserSelect: "none",
+                }}
+              >
+                AS
+              </span>
+            </div>
+          </Link>
         </div>
         <div className="flex items-center gap-8 laptop:gap-10 desktop:gap-12">
           <nav className="hidden gap-8 laptop:gap-10 desktop:gap-12 min-[700px]:flex">

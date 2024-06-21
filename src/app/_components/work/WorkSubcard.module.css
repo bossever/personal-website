@@ -16,6 +16,7 @@
 
 .timeline:last-of-type::before {
   height: calc(100% - var(--offset-y));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
 }
 
 .timeline::after {

@@ -30,10 +30,10 @@ export const navMenuItems: {
     href: "projects",
     label: "Projects",
   },
-  {
-    href: "skills",
-    label: "Skills",
-  },
+  // {
+  //   href: "skills",
+  //   label: "Skills",
+  // },
 ];
 
 export default function Navbar() {
@@ -47,7 +47,7 @@ export default function Navbar() {
           dark:bg-[#202020d9] tablet:bg-[#fbf6eb] tablet:dark:bg-[#202020]
           backdrop-blur-md tablet:backdrop-blur-0 items-center h-20 tablet:h-24
           desktop:h-28 px-8 laptop:px-14 desktop:px-16 border-0 border-[#202020]
-          dark:border-white transition-all duration-200 border-b
+          dark:border-white transition-[border] duration-200 border-b
           ${
             yScroll && yScroll >= 150
               ? "border-opacity-15 dark:border-opacity-15"

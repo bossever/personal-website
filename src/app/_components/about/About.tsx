@@ -34,10 +34,13 @@ export default function About() {
           <Typography
             level="paragraph"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            rutrum porttitor enim viverra dignissim. Duis placerat massa non
-            eleifend porttitor. Duis rhoncus tempor mollis. Quisque iaculis
-            sodales vestibulum. Vivamus at placerat massa, et blandit leo.
+            Hi there! I&apos;m Ayushman Sachan, a Software Engineer based out of India.
+            I love building software, and I am technically well versed with the software
+            development lifecycle - including ideation, design, development, testing & deployment.
+
+            My framework of choice for the client side is React.js or Next.js, and for the server side,
+            I use Node.js + Express.js, or the Django REST Framework. I&apos;m well experienced in tools like
+            Figma for design and prototyping, Docker for containerization, and AWS Cloud infra for deployment.
           </Typography>
           <br />
           <Typography
@@ -46,9 +49,8 @@ export default function About() {
               textAlign: "justify",
             }}
           >
-            Nunc pretium elementum risus, sit amet facilisis justo congue eu.
-            Quisque eu ligula ac quam pulvinar rutrum. Mauris id volutpat ipsum.
-            Nullam efficitur lectus nec nunc blandit tincidunt.
+            While I&apos;m not coding, I like to hit the gym, play badminton and swim. I&apos;m a sucker for cafe
+            racers and I enjoy bike rides on a cloudy day. 
           </Typography>
         </div>
       </div>

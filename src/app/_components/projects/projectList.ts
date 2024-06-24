@@ -5,8 +5,8 @@ export const projectList: ProjectCardProps[] = [
     title: "Microservices application using Django & Flask",
     techStack: ["Python", "Django", "Flask", "RabbitMQ", "SQLite"],
     description: `
-      Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
-      Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
+      Built a simple microservice application using Django and Flask for the microservice apps and React.js for the frontend webapp.
+      Used RabbitMQ as the message queue service for messaging between microservices and MySQL for the database.
     `,
     github: "https://github.com/bossever/blockvote",
   },
@@ -23,11 +23,11 @@ export const projectList: ProjectCardProps[] = [
     title: "Checkstyle",
     techStack: [
       "Java",
-      "Abstract Syntax Trees",
       "JUnit",
+      "PIT Mutation Testing",
       "Maven",
       "Intellij",
-      "PIT Testing",
+      "Abstract Syntax Trees",
     ],
     description: `
       Authored static code analysis features using the Checkstyle API and abstract syntax trees.
